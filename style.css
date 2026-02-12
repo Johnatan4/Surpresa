@@ -1,0 +1,49 @@
+body {
+    background-color: #ffafbd;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.card-romantico {
+    background: #f2e9e1; /* Bege idêntico ao vídeo */
+    padding: 25px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 420px;
+    animation: fadeIn 1s ease-in;
+}
+
+#treeCanvas {
+    /* Removido o width/height fixo para não esticar a imagem */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.titulo {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.contador-estilo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #c9184a;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
