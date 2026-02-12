@@ -1,3 +1,4 @@
+/* Configuração Geral do Fundo */
 body {
     background-color: #ffafbd;
     margin: 0;
@@ -9,23 +10,31 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+/* O Card - Agora Responsivo */
 .card-romantico {
-    background: #f2e9e1; /* Bege idêntico ao vídeo */
+    background: #f2e9e1; /* Bege do vídeo */
     padding: 25px;
     border-radius: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
-    width: 420px;
+    
+    /* Regra de Ouro para ADS: */
+    width: 90%;           /* Ocupa 90% da largura em telas pequenas */
+    max-width: 420px;     /* Não passa de 420px em telas grandes (sua TV) */
+    box-sizing: border-box; /* Padding não aumenta o tamanho total do card */
+    
     animation: fadeIn 1s ease-in;
 }
 
+/* Ajuste do Canvas para caber no Card */
 #treeCanvas {
-    /* Removido o width/height fixo para não esticar a imagem */
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 100%; /* Garante que o desenho não saia do card */
+    height: auto;
 }
 
+/* Estilo dos Textos */
 .titulo {
     color: #777;
     font-size: 0.9rem;
@@ -43,7 +52,25 @@ body {
     padding-left: 20px;
 }
 
+/* Animação de Entrada */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- MEDIA QUERY PARA CELULARES --- */
+@media (max-width: 480px) {
+    .card-romantico {
+        padding: 15px;
+        border-radius: 25px; /* Bordas um pouco menos arredondadas no celular */
+    }
+    
+    .contador-estilo {
+        font-size: 1.1rem; /* Fonte levemente menor para não quebrar no mobile */
+        padding-left: 10px;
+    }
+    
+    .titulo {
+        padding-left: 10px;
+    }
 }
