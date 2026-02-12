@@ -18,10 +18,10 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
     
-    /* Regra de Ouro para ADS: */
-    width: 90%;           /* Ocupa 90% da largura em telas pequenas */
-    max-width: 420px;     /* Não passa de 420px em telas grandes (sua TV) */
-    box-sizing: border-box; /* Padding não aumenta o tamanho total do card */
+    /* Lógica de ADS: Responsividade */
+    width: 90%;           /* No celular, quase encosta nas bordas */
+    max-width: 420px;     /* No seu monitor de 32", trava nesse tamanho */
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
     
     animation: fadeIn 1s ease-in;
 }
@@ -30,7 +30,7 @@ body {
 #treeCanvas {
     display: block;
     margin: 0 auto;
-    max-width: 100%; /* Garante que o desenho não saia do card */
+    max-width: 100%; 
     height: auto;
 }
 
@@ -62,11 +62,11 @@ body {
 @media (max-width: 480px) {
     .card-romantico {
         padding: 15px;
-        border-radius: 25px; /* Bordas um pouco menos arredondadas no celular */
+        border-radius: 25px;
     }
     
     .contador-estilo {
-        font-size: 1.1rem; /* Fonte levemente menor para não quebrar no mobile */
+        font-size: 1.1rem; /* Ajuste fino para não quebrar a linha no mobile */
         padding-left: 10px;
     }
     
